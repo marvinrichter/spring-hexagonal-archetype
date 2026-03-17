@@ -4,6 +4,7 @@
   "packages": {
     ".": {
       "release-type": "maven",
+      "skip-snapshot": true,
       "changelog-sections": [
         { "type": "feat",  "section": "Features" },
         { "type": "fix",   "section": "Bug Fixes" },
