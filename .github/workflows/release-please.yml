@@ -3,6 +3,11 @@ name: Release Please
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      publish_version:
+        description: 'Version to publish (e.g. 1.1.2) — skips release-please, only runs deploy'
+        required: true
 
 permissions:
   contents: write
@@ -19,12 +24,12 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-      # After a release is merged, tag it and publish to GitHub Packages
+      # After a release is merged (or manual dispatch), tag it and publish to GitHub Packages
       - uses: actions/checkout@v6
-        if: ${{ steps.release.outputs.release_created }}
+        if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
 
       - name: Set up Java 25
-        if: ${{ steps.release.outputs.release_created }}
+        if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
         uses: actions/setup-java@v5
         with:
           java-version: '25'
@@ -36,7 +41,7 @@ jobs:
           server-password: GITHUB_TOKEN
 
       - name: Publish to GitHub Packages
-        if: ${{ steps.release.outputs.release_created }}
+        if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
         run: mvn --batch-mode deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
