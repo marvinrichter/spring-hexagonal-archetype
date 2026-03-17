@@ -4,7 +4,7 @@
 
     <groupId>de.marvinrichter</groupId>
     <artifactId>spring-hexagonal-archetype</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1</version>
     <packaging>maven-archetype</packaging>
 
     <name>Spring Hexagonal Archetype</name>
