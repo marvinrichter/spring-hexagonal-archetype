@@ -7,6 +7,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.1.2](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.1...v1.1.2) (2026-03-17)
+
+
+### Maintenance
+
+* **main:** release 1.1.2-SNAPSHOT ([#8](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/8)) ([691719d](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/691719d35573df8e51a23f07364cd11be64bc81c))
+
 ## [1.1.1](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.0...v1.1.1) (2026-03-17)
 
 
