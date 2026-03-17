@@ -19,7 +19,7 @@ jobs:
           manifest-file: .release-please-manifest.json
 
       # After a release is merged, tag it and publish to GitHub Packages
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Set up Java 25
