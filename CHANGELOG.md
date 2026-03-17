@@ -7,6 +7,17 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.1.1](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.0...v1.1.1) (2026-03-17)
+
+
+### Maintenance
+
+* Bump actions/checkout from 4 to 6 ([c1c8f43](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/c1c8f43119b602799fda336b1e99faceb5cde0b7))
+* Bump actions/checkout from 4 to 6 ([c8828f1](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/c8828f1538692102141f5d08a48ed36d4f988ef3))
+* Bump actions/setup-java from 4 to 5 ([ed42d7a](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/ed42d7ae76b7945ecaaa02a77aeb430c5fd62bb6))
+* Bump org.apache.maven.plugins:maven-resources-plugin from 3.3.1 to 3.5.0 ([eea9b2e](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/eea9b2e7eb5d2434d7fd7ab489cfdae609da4887))
+* **main:** release 1.1.1-SNAPSHOT ([#6](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/6)) ([0c2c480](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/0c2c480dea756a6845b038b12ab6e528e363fb3f))
+
 ## [1.1.0](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.0.0...v1.1.0) (2026-03-17)
 
 
