@@ -46,6 +46,14 @@
         <url>https://github.com/marvinrichter/spring-hexagonal-archetype/issues</url>
     </issueManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/marvinrichter/spring-hexagonal-archetype</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
         <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

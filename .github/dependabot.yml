@@ -1,0 +1,44 @@
+version: 2
+updates:
+  # Maven dependencies in the archetype pom (the archetype itself)
+  - package-ecosystem: maven
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    labels:
+      - dependencies
+    commit-message:
+      prefix: chore
+    # Group all non-Spring-Boot updates together to reduce noise
+    groups:
+      archunit:
+        patterns:
+          - "com.tngtech.archunit:*"
+      testcontainers:
+        patterns:
+          - "org.testcontainers:*"
+
+  # Maven dependencies in the generated project template
+  - package-ecosystem: maven
+    directory: /src/main/resources/archetype-resources
+    schedule:
+      interval: weekly
+      day: monday
+    labels:
+      - dependencies
+      - archetype-template
+    commit-message:
+      prefix: chore
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    labels:
+      - dependencies
+      - ci
+    commit-message:
+      prefix: chore

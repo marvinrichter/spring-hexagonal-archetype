@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "maven",
+  "packages": {
+    ".": {
+      "release-type": "maven",
+      "changelog-sections": [
+        { "type": "feat",  "section": "Features" },
+        { "type": "fix",   "section": "Bug Fixes" },
+        { "type": "chore", "section": "Maintenance", "hidden": false },
+        { "type": "docs",  "section": "Documentation", "hidden": false },
+        { "type": "ci",    "section": "CI", "hidden": true }
+      ]
+    }
+  }
+}
