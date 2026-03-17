@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0
+                        https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+    name="spring-hexagonal-archetype"
+    partial="false">
+
+    <requiredProperties>
+        <requiredProperty key="groupId"/>
+        <requiredProperty key="artifactId"/>
+        <requiredProperty key="version">
+            <defaultValue>1.0.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="package"/>
+    </requiredProperties>
+
+    <fileSets>
+        <!-- Root files (README, .gitignore, Maven wrapper scripts) -->
+        <fileSet filtered="false" encoding="UTF-8" packaged="false">
+            <directory></directory>
+            <includes>
+                <include>mvnw</include>
+                <include>mvnw.cmd</include>
+                <include>README.md</include>
+                <include>.gitignore</include>
+            </includes>
+        </fileSet>
+
+        <!-- Maven wrapper jar -->
+        <fileSet filtered="false" encoding="UTF-8" packaged="false" fileMode="755">
+            <directory>.mvn/wrapper</directory>
+            <includes>
+                <include>maven-wrapper.properties</include>
+            </includes>
+        </fileSet>
+
+        <!-- Main Java sources (packaged — placed under package path) -->
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+
+        <!-- Main resources -->
+        <fileSet filtered="true" encoding="UTF-8" packaged="false">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+
+        <!-- Test Java sources -->
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+
+        <!-- Test resources -->
+        <fileSet filtered="true" encoding="UTF-8" packaged="false">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+</archetype-descriptor>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.marvinrichter</groupId>
+    <artifactId>spring-hexagonal-archetype</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>maven-archetype</packaging>
+
+    <name>Spring Hexagonal Archetype</name>
+    <description>
+        Maven archetype that generates a Spring Boot 4 + Java 25 project enforcing
+        hexagonal (ports-and-adapters) architecture via ArchUnit.
+    </description>
+    <url>https://github.com/marvinrichter/spring-hexagonal-archetype</url>
+    <inceptionYear>2026</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>marvinrichter</id>
+            <name>Marvin Richter</name>
+            <url>https://marvin-richter.de</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/marvinrichter/spring-hexagonal-archetype.git</connection>
+        <developerConnection>scm:git:ssh://github.com/marvinrichter/spring-hexagonal-archetype.git</developerConnection>
+        <url>https://github.com/marvinrichter/spring-hexagonal-archetype/tree/main</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/marvinrichter/spring-hexagonal-archetype/issues</url>
+    </issueManagement>
+
+    <properties>
+        <maven.compiler.release>25</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-archetype-plugin.version>3.4.1</maven-archetype-plugin.version>
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+    </properties>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>${maven-archetype-plugin.version}</version>
+            </extension>
+        </extensions>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-archetype-plugin</artifactId>
+                    <version>${maven-archetype-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>${maven-resources-plugin.version}</version>
+                    <configuration>
+                        <!-- Archetype resources use Velocity templates — do not filter them -->
+                        <useDefaultDelimiters>false</useDefaultDelimiters>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

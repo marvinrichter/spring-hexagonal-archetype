@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: ${artifactId}
+
+  datasource:
+    url: jdbc:postgresql://${symbol_dollar}{DB_HOST:localhost}:${symbol_dollar}{DB_PORT:5432}/${symbol_dollar}{DB_NAME:${artifactId}}
+    username: ${symbol_dollar}{DB_USER:postgres}
+    password: ${symbol_dollar}{DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  sql:
+    init:
+      mode: always
+
+# -----------------------------------------------------------------------
+# Actuator — expose health and Prometheus metrics endpoints
+# -----------------------------------------------------------------------
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, prometheus
+  endpoint:
+    health:
+      show-details: when-authorized
+  metrics:
+    tags:
+      application: ${symbol_dollar}{spring.application.name}
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+      slo:
+        http.server.requests: 50ms, 100ms, 200ms, 500ms
+
+# -----------------------------------------------------------------------
+# Application info (shown in /actuator/info)
+# -----------------------------------------------------------------------
+info:
+  app:
+    name: ${symbol_dollar}{spring.application.name}
+    architecture: hexagonal
+
+# -----------------------------------------------------------------------
+# Logging
+# -----------------------------------------------------------------------
+logging:
+  level:
+    root: INFO
+    ${package}: DEBUG

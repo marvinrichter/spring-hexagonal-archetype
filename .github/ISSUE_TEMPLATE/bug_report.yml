@@ -1,0 +1,77 @@
+name: Bug report
+description: Something breaks during archetype generation or in the generated project
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please fill in as much as you can —
+        the archetype machinery and the generated project are separate failure surfaces.
+
+  - type: dropdown
+    id: failure-surface
+    attributes:
+      label: Where does the failure occur?
+      options:
+        - During `mvn archetype:generate` (archetype itself)
+        - In the generated project — `./mvnw test` (unit/ArchUnit tests)
+        - In the generated project — `./mvnw verify` (Testcontainers integration tests)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run `mvn archetype:generate ...`
+        2. Run `./mvnw verify`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error output
+      description: Paste the relevant Maven output, stack trace, or test failure message.
+      render: shell
+
+  - type: input
+    id: archetype-version
+    attributes:
+      label: Archetype version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: java-version
+    attributes:
+      label: Java version
+      placeholder: "25.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "macOS 15, Ubuntu 24.04, Windows 11"
+    validations:
+      required: true
+
+  - type: input
+    id: docker-version
+    attributes:
+      label: Docker version (if the failure involves Testcontainers)
+      placeholder: "29.0.2"

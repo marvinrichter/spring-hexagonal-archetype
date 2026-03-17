@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest an improvement to the archetype or the generated project
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a feature request, check the [out-of-scope section in CONTRIBUTING.md](../CONTRIBUTING.md)
+        — some things (auth, Flyway, Lombok) are intentionally excluded.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: |
+        Describe the concrete situation where the archetype falls short.
+        "I wish the archetype had X" is less useful than "When I do Y, I can't Z because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you add or change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What else did you consider? Why does the proposed solution fit better?
+
+  - type: checkboxes
+    id: scope-check
+    attributes:
+      label: Scope check
+      options:
+        - label: This is not in the explicit out-of-scope list in CONTRIBUTING.md
+          required: true
+        - label: This keeps the archetype focused on hexagonal architecture concerns
+          required: true
