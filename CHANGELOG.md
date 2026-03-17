@@ -7,6 +7,21 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.1.0](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.0.0...v1.1.0) (2026-03-17)
+
+
+### Features
+
+* initial release of spring-hexagonal-archetype 1.0.0 ([878bd50](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/878bd50feaab51e07a44d4bc23d0707e38f5daf2))
+
+
+### Maintenance
+
+* add dependabot, release-please, and GitHub Packages publishing ([be45f43](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/be45f43009b692bd97d65f2062d4ffeaea845a61))
+* add SPDX identifier to LICENSE for GitHub detection ([c5890b6](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/c5890b63c7c4bb9d37107494d9b0f462cb74b273))
+* **main:** release 1.0.1-SNAPSHOT ([7584494](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/7584494888e97b53be0070e6f19583cc5caafffb))
+* **main:** release 1.0.1-SNAPSHOT ([56f455b](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/56f455b07711b4e3252a29088ae8037dfb74df64))
+
 ## [Unreleased]
 
 ## [1.0.0] — 2026-03-17
