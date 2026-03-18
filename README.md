@@ -100,7 +100,7 @@ Every build verifies these constraints. Violations fail the build.
 
 ```bash
 mvn archetype:generate \
-  -DarchetypeGroupId=de.marvinrichter \
+  -DarchetypeGroupId=io.github.marvinrichter \
   -DarchetypeArtifactId=spring-hexagonal-archetype \
   -DarchetypeVersion=1.0.0 \
   -DgroupId=com.example \

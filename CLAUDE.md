@@ -10,7 +10,7 @@ This is the project structure used on every greenfield JVM client engagement —
 # Generate a project from the archetype (local install)
 ./mvnw install
 mvn archetype:generate \
-  -DarchetypeGroupId=de.marvinrichter \
+  -DarchetypeGroupId=io.github.marvinrichter \
   -DarchetypeArtifactId=spring-hexagonal-archetype \
   -DarchetypeVersion=1.1.2-SNAPSHOT
 
