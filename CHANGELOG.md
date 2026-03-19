@@ -7,6 +7,19 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.1.3](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.2...v1.1.3) (2026-03-19)
+
+
+### Maintenance
+
+* switch groupId to io.github.marvinrichter, add Maven Central publishing profile ([56b827d](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/56b827d2c0efed018603aa0842c2b4df00818865))
+
+
+### Documentation
+
+* add CLAUDE.md ([e5e7474](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/e5e7474166218abd199d694f2792e25e6d3d5e2f))
+* remove freelance framing from README and CLAUDE.md ([9d9c1c0](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/9d9c1c0d6790c4c432ca188f805746193d297387))
+
 ## [1.1.2](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.1...v1.1.2) (2026-03-17)
 
 
