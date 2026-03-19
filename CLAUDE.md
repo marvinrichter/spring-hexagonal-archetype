@@ -2,7 +2,7 @@
 
 Maven archetype that generates a production-ready Spring Boot project wired for hexagonal (ports-and-adapters) architecture. ArchUnit rules enforced. Testcontainers integration test included. Micrometer + Actuator baked in.
 
-This is the project structure used on every greenfield JVM client engagement — it is also the "target state" referenced throughout the jvm-modernisation-playbook.
+This is also the "target state" referenced throughout the jvm-modernisation-playbook.
 
 ## Key commands
 
@@ -54,8 +54,7 @@ These rules fail the build immediately if violated.
 
 - Domain model is pure Java — no `@Entity`, no Spring annotations
 - One complete vertical slice (Order domain) demonstrates the full pattern: REST → use case → domain → JPA
-- README voice is consulting-framing: "this is the structure I use with clients"
-- CTA at bottom of README links to marvin-richter.de
+- No freelance or "available for hire" framing — OSS project, not a consulting pitch
 - Do not add features beyond what's in the Acceptance Criteria — credibility depends on the example being clean and purposeful
 
 ## Relationship to jvm-modernisation-playbook

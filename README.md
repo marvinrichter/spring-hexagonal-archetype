@@ -4,7 +4,6 @@ A Maven archetype that generates a production-ready Spring Boot 4 project wired 
 **hexagonal (ports-and-adapters) architecture** — with ArchUnit enforcement, Testcontainers
 integration tests, and Micrometer observability baked in from day one.
 
-This is the project structure I use on every greenfield JVM client engagement.
 Not because it's fashionable, but because it consistently delivers the one thing
 legacy codebases lack: a seam. A place where you can swap the database, add a
 message broker, or extract a service without touching the domain.
@@ -155,10 +154,3 @@ cd my-service
 
 ---
 
-## Need help setting up or modernising a JVM codebase?
-
-This archetype is the starting point. The harder work is getting an existing system
-to this structure — extracting domain logic, introducing ports, breaking persistence
-coupling — without stopping feature delivery.
-
-That's the kind of engagement I take on. → **[marvin-richter.de](https://marvin-richter.de)**
