@@ -7,6 +7,32 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ---
 
+## [1.1.3](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.2...v1.1.3) (2026-08-23)
+
+
+### Maintenance
+
+* Bump com.tngtech.archunit:archunit-junit5 ([fadf50b](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/fadf50bcdeb779d73f6a3723a6af0f086706bc2f))
+* Bump com.tngtech.archunit:archunit-junit5 from 1.4.1 to 1.4.2 in /src/main/resources/archetype-resources ([#18](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/18)) ([fadf50b](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/fadf50bcdeb779d73f6a3723a6af0f086706bc2f))
+* Bump googleapis/release-please-action from 4 to 5 ([#19](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/19)) ([2ecb0a0](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/2ecb0a0e220b3bc6dbf87d30e0e63182875401af))
+* Bump org.apache.maven.plugins:maven-gpg-plugin ([259a7a4](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/259a7a4411a051af240cd2eb1582df7d1078adb0))
+* Bump org.apache.maven.plugins:maven-gpg-plugin from 3.2.7 to 3.2.8 ([#12](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/12)) ([259a7a4](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/259a7a4411a051af240cd2eb1582df7d1078adb0))
+* Bump org.apache.maven.plugins:maven-source-plugin ([b737d00](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/b737d00fa05538f854cac5c926f6ac0a2d63695f))
+* Bump org.apache.maven.plugins:maven-source-plugin from 3.3.1 to 3.4.0 ([#15](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/15)) ([b737d00](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/b737d00fa05538f854cac5c926f6ac0a2d63695f))
+* Bump org.sonatype.central:central-publishing-maven-plugin ([603e969](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/603e969feba11063595d5e8d0efafb658372de9b))
+* Bump org.sonatype.central:central-publishing-maven-plugin from 0.7.0 to 0.10.0 ([#13](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/13)) ([603e969](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/603e969feba11063595d5e8d0efafb658372de9b))
+* Bump org.springframework.boot:spring-boot-starter-parent ([2b6b309](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/2b6b30911f5873ae1afbe8f9be6f1589da838474))
+* Bump org.springframework.boot:spring-boot-starter-parent from 4.0.3 to 4.1.0 in /src/main/resources/archetype-resources ([#22](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/22)) ([2b6b309](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/2b6b30911f5873ae1afbe8f9be6f1589da838474))
+* Bump org.testcontainers:testcontainers-bom ([22ad699](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/22ad6998e0386cda7d04bdb53220c5e3c032e6ac))
+* Bump org.testcontainers:testcontainers-bom from 2.0.3 to 2.0.5 in /src/main/resources/archetype-resources ([#20](https://github.com/marvinrichter/spring-hexagonal-archetype/issues/20)) ([22ad699](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/22ad6998e0386cda7d04bdb53220c5e3c032e6ac))
+* switch groupId to io.github.marvinrichter, add Maven Central publishing profile ([56b827d](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/56b827d2c0efed018603aa0842c2b4df00818865))
+
+
+### Documentation
+
+* add CLAUDE.md ([e5e7474](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/e5e7474166218abd199d694f2792e25e6d3d5e2f))
+* remove freelance framing from README and CLAUDE.md ([9d9c1c0](https://github.com/marvinrichter/spring-hexagonal-archetype/commit/9d9c1c0d6790c4c432ca188f805746193d297387))
+
 ## [1.1.2](https://github.com/marvinrichter/spring-hexagonal-archetype/compare/v1.1.1...v1.1.2) (2026-03-17)
 
 
