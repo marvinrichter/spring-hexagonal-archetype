@@ -3,16 +3,10 @@ name: Release Please
 on:
   push:
     branches: [ "main" ]
-  workflow_dispatch:
-    inputs:
-      publish_version:
-        description: 'Version to publish (e.g. 1.1.2) — skips release-please, only runs deploy'
-        required: true
 
 permissions:
   contents: write
   pull-requests: write
-  packages: write
 
 jobs:
   release-please:
@@ -24,24 +18,13 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-      # After a release is merged (or manual dispatch), tag it and publish to GitHub Packages
-      - uses: actions/checkout@v6
-        if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
-
-      - name: Set up Java 25
-        if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
-        uses: actions/setup-java@v5
-        with:
-          java-version: '25'
-          distribution: 'temurin'
-          cache: maven
-          # Configures settings.xml for GitHub Packages publishing
-          server-id: github
-          server-username: GITHUB_ACTOR
-          server-password: GITHUB_TOKEN
-
-      - name: Publish to GitHub Packages
-        if: ${{ steps.release.outputs.release_created || github.event_name == 'workflow_dispatch' }}
-        run: mvn --batch-mode deploy -DskipTests
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Maven Central is published by hand, from a machine that holds the GPG
+      # key and the central credentials. Nothing here uploads anything:
+      #
+      #     git checkout v<version>
+      #     mvn --batch-mode -P release deploy -DskipTests
+      #
+      # The step that used to sit here ran `mvn deploy` without `-P release`,
+      # so the central-publishing and gpg plugins in that profile never fired
+      # and the default deploy failed for want of a distributionManagement
+      # repository. It had been failing since the release before this note.
